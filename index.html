@@ -7,6 +7,76 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Imprima&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Quick page-specific styles: set a dark-blue background and make the listing images responsive -->
+        <style>
+            :root{
+                --dark-blue: #07294d; /* dark blue background */
+                --highlight: #ffd966;
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+                background: var(--dark-blue);
+                color: #ffffff;
+                font-family: 'Open Sans', sans-serif;
+                -webkit-font-smoothing:antialiased;
+            }
+            .banner {
+                margin: 0;
+                padding: 16px 20px;
+                text-align: left;
+                background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+                color: #fff;
+            }
+            #header {
+                padding: 12px 20px;
+            }
+            a { color: #cfe8ff; }
+            main { padding: 20px; max-width: 1000px; margin: 0 auto; }
+
+            /* Surreal listing */
+            #surreal-listing {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 18px;
+                margin-bottom: 28px;
+            }
+            @media(min-width:800px){
+                #surreal-listing { grid-template-columns: repeat(3, 1fr); }
+            }
+            #surreal-listing .surreal-item {
+                background: rgba(255,255,255,0.03);
+                padding: 12px;
+                border-radius: 8px;
+                text-align: center;
+            }
+            #surreal-listing img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto 10px;
+                border-radius: 6px;
+                box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+            }
+            #surreal-listing .filename {
+                font-size: 0.9rem;
+                color: #cfe8ff;
+                word-break: break-all;
+            }
+
+            .project {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+                background: rgba(255,255,255,0.02);
+                padding: 14px;
+                border-radius: 8px;
+            }
+            .project img { width: 220px; max-width: 35%; border-radius: 6px; }
+            .highlight { color: var(--highlight); font-weight:700; }
+            .link-btn { display:inline-block; margin-right:8px; margin-top:10px; padding:8px 12px; background:#0b4a83; color:#fff; text-decoration:none; border-radius:6px; }
+        </style>
     </head>
 
 	<body>
@@ -41,14 +111,26 @@
 		</header>
 
         <h2 class="banner">Surreal Landscapes</h2>
+
         <main>
-            <section id="surreal-listing">
-                <h3>Surreal background files</h3>
-                <ul>
-                    <li>surreal-blue-landscape-stockcake.jpg</li>
-                    <li>70ab682cc015f3f46a0e8f0423309b0ce9738765.webp</li>
-                    <li>123.png</li>
-                </ul>
+            <!-- Surreal images displayed instead of just listing file names -->
+            <section id="surreal-listing" aria-labelledby="surreal-heading">
+                <h3 id="surreal-heading" style="grid-column:1/-1; margin:0 0 6px 0; color:#fff;">Surreal background files</h3>
+
+                <div class="surreal-item">
+                    <img src="images/surreal-blue-landscape-stockcake.jpg" alt="surreal blue landscape">
+                    <div class="filename">surreal-blue-landscape-stockcake.jpg</div>
+                </div>
+
+                <div class="surreal-item">
+                    <img src="images/70ab682cc015f3f46a0e8f0423309b0ce9738765.webp" alt="surreal landscape 70ab...">
+                    <div class="filename">70ab682cc015f3f46a0e8f0423309b0ce9738765.webp</div>
+                </div>
+
+                <div class="surreal-item">
+                    <img src="images/123.png" alt="surreal landscape 123">
+                    <div class="filename">123.png</div>
+                </div>
             </section>
 
         <article class="project">
