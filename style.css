@@ -61,7 +61,7 @@ header {
 
 #header-contact a {
     text-decoration: none;
-    color: rgb(67, 66, 66)
+    color: rgb(67, 150, 255)
 }
 
 #header-contact a:hover {
@@ -69,7 +69,7 @@ header {
 }
 
 #header-contact i {
-    color: rgb(67, 66, 66)
+    color: rgb(67, 150, 255)
     
 }
 
