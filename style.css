@@ -126,7 +126,7 @@ ul {
 
 ul li::before {
     content: "\2022";
-    color: #d3368a;
+    color: #32A8A4;
     font-weight: bold; /* If you want it to be bold */
     display: inline-block; /* Needed to add space between the bullet and the text */
     width: 1em; /* Also needed for space (tweak if needed) */
@@ -143,7 +143,7 @@ main {
 }
 
 .link-btn {
-    background-color: #d5626d;
+    background-color: #32A8A4;
     padding: 10px;
     margin: 5px;
     margin-top: 40px;
@@ -152,6 +152,6 @@ main {
 }
 
 .link-btn:hover {
-    background-color: #df3a6b;
+    background-color: #32A8A4;
     color: white;
 }
