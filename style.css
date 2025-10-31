@@ -21,7 +21,7 @@ body {
 } */
 
 .banner {
-    background-color: #d5626d;
+    background-color: #222999;
     padding: 10px;
     margin-top: 30px;
     
@@ -54,7 +54,7 @@ header {
 }
 
 #header-contact {
-    background-color: #d5626d;
+    background-color: #222999;
     padding: 5px 5px 20px 20px;
     max-width: 180px;
 }
@@ -79,7 +79,7 @@ p {
 }
 
 .highlight {
-    color: #c9789f;
+    color: #7896C9;
     font-weight: bold;
 }
 
